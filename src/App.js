@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Students from './Student';
 
 function App() {
@@ -8,19 +8,22 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   const addValue = () => {
-    setCounter(counter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    // setCounter(counter + 1);
     console.log(counter);
   }
 
   const removeValue = () => {
     setCounter(counter - 1);
-    console.log(counter);
   }
 
   const resetvalue = () => {
     setCounter(0);
-    console.log(counter);
   }
+
+  useEffect(() => {
+    console.log(counter);
+  }, [counter])
 
   return (
     <>
