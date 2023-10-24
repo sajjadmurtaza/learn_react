@@ -1,11 +1,24 @@
 
+import { useState } from 'react';
 import Students from './Student';
 
 function App() {
-  let counter = 0;
+  // let counter = 0;
+
+  const [counter, setCounter] = useState(0);
 
   const addValue = () => {
-    counter = counter + 1;
+    setCounter(counter + 1);
+    console.log(counter);
+  }
+
+  const removeValue = () => {
+    setCounter(counter - 1);
+    console.log(counter);
+  }
+
+  const resetvalue = () => {
+    setCounter(0);
     console.log(counter);
   }
 
@@ -13,8 +26,17 @@ function App() {
     <>
       <Students name="John Doe" />
       {counter}
+
       <button onClick={addValue}>
         Add
+      </button>
+
+      <button onClick={removeValue}>
+        Remove
+      </button>
+
+      <button onClick={resetvalue}>
+        Reset
       </button>
     </>
   );
