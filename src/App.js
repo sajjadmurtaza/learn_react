@@ -1,6 +1,11 @@
+
+import Student from './Student';
+
 function App() {
   return (
-    <p>Simple React App</p>
+    <>
+      <Student name="John Doe" />
+    </>
   );
 }
 
