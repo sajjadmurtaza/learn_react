@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import Students from './Student';
+import './index.css';
+import Card from './components/Card';
 
 function App() {
   // let counter = 0;
@@ -27,6 +29,12 @@ function App() {
 
   return (
     <>
+      <Card />
+      <Card title = 'Student' grade = '1' />
+      
+      <h1 className="text-3xl font-bold underline bg-green-500">
+        Hello world!
+      </h1>
       <Students name="John Doe" />
       {counter}
 
